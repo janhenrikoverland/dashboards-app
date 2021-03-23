@@ -12,12 +12,13 @@ import {
     MARGIN_PX,
     GRID_COLUMNS,
 } from '../../modules/gridUtil'
-import { A4_LANDSCAPE_WIDTH_PX } from '../../modules/printUtils'
 
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 
 import './styles/ItemGrid.css'
+
+const PAGE_PADDING_PX = 24
 
 const StaticGrid = ({
     layout,
@@ -34,6 +35,11 @@ const StaticGrid = ({
         )
     }
 
+    const style = window.getComputedStyle(document.documentElement)
+    const pageWidthPx = parseInt(
+        style.getPropertyValue('--a4-landscape-width-px').replace('px', '')
+    )
+
     return (
         <>
             {isLoading ? (
@@ -47,7 +53,7 @@ const StaticGrid = ({
                 margin={MARGIN_PX}
                 cols={GRID_COLUMNS}
                 rowHeight={GRID_ROW_HEIGHT_PX}
-                width={A4_LANDSCAPE_WIDTH_PX}
+                width={pageWidthPx - PAGE_PADDING_PX}
                 compactType={GRID_COMPACT_TYPE}
                 isDraggable={false}
                 isResizable={false}

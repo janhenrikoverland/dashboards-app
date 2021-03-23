@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     width: auto;
-    max-width: 1102px;
+    max-width: var(--a4-landscape-width-px);
 }
 
 .link {

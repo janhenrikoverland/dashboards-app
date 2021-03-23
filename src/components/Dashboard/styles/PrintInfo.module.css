@@ -20,7 +20,7 @@
 }
 
 .divider {
-    width: 1102px;
+    width: var(--a4-landscape-width-px);;
     height: 1px;
     margin: var(--spacers-dp16) 0;
     border: 0;

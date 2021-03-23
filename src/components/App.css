@@ -20,6 +20,12 @@
     --item-header-margin-top: 8px;
     --item-header-margin-bottom: 8px;
     --item-content-padding: 4px;
+
+    /* print variables */
+    /* for A4 landscape (297x210mm) */
+    /* (29.7 /2.54) * 96 pixels/inch - 20px print margin */
+    /* changing this number could have consequences for a multipage printout */
+    --a4-landscape-width-px: 1102px;
 }
 
 body {
