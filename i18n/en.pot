@@ -145,6 +145,9 @@ msgstr "Translate"
 msgid "Delete"
 msgstr "Delete"
 
+msgid "Auto layout"
+msgstr "Auto layout"
+
 msgid "Exit without saving"
 msgstr "Exit without saving"
 

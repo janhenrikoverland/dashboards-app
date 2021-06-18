@@ -15,6 +15,7 @@ import {
     CLEAR_PRINT_PREVIEW_VIEW,
     RECEIVED_FILTER_SETTINGS,
     sGetEditDashboardRoot,
+    RECEIVED_HIDE_GRID,
 } from '../reducers/editDashboard'
 import { tFetchDashboards } from './dashboards'
 import { updateDashboard, postDashboard } from '../api/editDashboard'
@@ -109,6 +110,11 @@ export const acRemoveDashboardItem = value => ({
 
 export const acSetFilterSettings = value => ({
     type: RECEIVED_FILTER_SETTINGS,
+    value,
+})
+
+export const acSetHideGrid = value => ({
+    type: RECEIVED_HIDE_GRID,
     value,
 })
 

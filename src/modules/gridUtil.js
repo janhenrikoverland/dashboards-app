@@ -181,3 +181,59 @@ export const getItemHeightPx = (item, windowWidthPx) => {
 
 const getItemWHPx = (gridUnits, colOrRowSize, marginPx) =>
     Math.round(colOrRowSize * gridUnits + Math.max(0, gridUnits - 1) * marginPx)
+
+// Auto layout
+
+const getNumberOfColGroupCols = (
+    numberOfColGroups = 2,
+    maxCols = GRID_COLUMNS
+) => {
+    if (numberOfColGroups < 1 || numberOfColGroups > maxCols) {
+        return null
+    }
+
+    return Math.floor(maxCols / numberOfColGroups)
+}
+
+const sortItems = items =>
+    items.slice().sort((a, b) => (a.y === b.y ? a.x - b.x : a.y - b.y))
+
+export const getAutoItemShapes = (
+    dashboardItems,
+    numberOfColGroups,
+    maxCols
+) => {
+    const numberOfColGroupCols = getNumberOfColGroupCols(
+        numberOfColGroups,
+        maxCols
+    )
+
+    if (!numberOfColGroupCols || !dashboardItems.length) {
+        return null
+    }
+
+    const items = sortItems(dashboardItems)
+    const itemsWithNewShape = []
+    const itemHeight = NEW_ITEM_SHAPE.h
+
+    for (let i = 0, colIdx = 0, rowIdx = 0, item; i < items.length; i++) {
+        item = items[i]
+
+        itemsWithNewShape.push({
+            ...item,
+            w: numberOfColGroupCols,
+            h: itemHeight,
+            x: numberOfColGroupCols * colIdx,
+            y: itemHeight * rowIdx,
+        })
+
+        colIdx = colIdx + 1
+
+        if (colIdx === numberOfColGroups) {
+            colIdx = 0
+            rowIdx = rowIdx + 1
+        }
+    }
+
+    return itemsWithNewShape
+}
