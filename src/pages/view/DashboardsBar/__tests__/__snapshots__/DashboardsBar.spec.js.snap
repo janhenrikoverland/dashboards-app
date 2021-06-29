@@ -5,6 +5,7 @@ exports[`clicking "Show more" maximizes dashboards bar height 1`] = `
   <div
     class="collapsed"
     data-test="dashboards-bar"
+    style="position: relative;"
   >
     <div
       class="container"
@@ -85,7 +86,6 @@ exports[`clicking "Show more" maximizes dashboards bar height 1`] = `
                     class="jsx-2371629422 button-icon"
                   >
                     <svg
-                      color="#6e7a8a"
                       height="24"
                       viewBox="0 0 24 24"
                       width="24"
@@ -177,7 +177,9 @@ exports[`clicking "Show more" maximizes dashboards bar height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Fluttershy
+                  <span>
+                    Fluttershy
+                  </span>
                 </span>
               </span>
             </a>
@@ -193,7 +195,9 @@ exports[`clicking "Show more" maximizes dashboards bar height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Rainbow Dash
+                  <span>
+                    Rainbow Dash
+                  </span>
                 </span>
               </span>
             </a>
@@ -229,6 +233,17 @@ exports[`clicking "Show more" maximizes dashboards bar height 1`] = `
     <div
       class="spacer"
     />
+    <div
+      style="position: absolute; top: 0px; right: 0px;"
+    >
+      <button
+        class="jsx-2371629422 "
+        data-test="dhis2-uicore-button"
+        type="button"
+      >
+        You are online
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -238,6 +253,7 @@ exports[`renders a DashboardsBar with maximum height 1`] = `
   <div
     class="collapsed"
     data-test="dashboards-bar"
+    style="position: relative;"
   >
     <div
       class="container"
@@ -319,7 +335,6 @@ exports[`renders a DashboardsBar with maximum height 1`] = `
                     class="jsx-2371629422 button-icon"
                   >
                     <svg
-                      color="#6e7a8a"
                       height="24"
                       viewBox="0 0 24 24"
                       width="24"
@@ -412,7 +427,9 @@ exports[`renders a DashboardsBar with maximum height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Fluttershy
+                  <span>
+                    Fluttershy
+                  </span>
                 </span>
               </span>
             </a>
@@ -428,7 +445,9 @@ exports[`renders a DashboardsBar with maximum height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Rainbow Dash
+                  <span>
+                    Rainbow Dash
+                  </span>
                 </span>
               </span>
             </a>
@@ -462,6 +481,17 @@ exports[`renders a DashboardsBar with maximum height 1`] = `
     <div
       class="spacer"
     />
+    <div
+      style="position: absolute; top: 0px; right: 0px;"
+    >
+      <button
+        class="jsx-2371629422 "
+        data-test="dhis2-uicore-button"
+        type="button"
+      >
+        You are online
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -471,6 +501,7 @@ exports[`renders a DashboardsBar with minimum height 1`] = `
   <div
     class="collapsed"
     data-test="dashboards-bar"
+    style="position: relative;"
   >
     <div
       class="container"
@@ -552,7 +583,6 @@ exports[`renders a DashboardsBar with minimum height 1`] = `
                     class="jsx-2371629422 button-icon"
                   >
                     <svg
-                      color="#6e7a8a"
                       height="24"
                       viewBox="0 0 24 24"
                       width="24"
@@ -645,7 +675,9 @@ exports[`renders a DashboardsBar with minimum height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Fluttershy
+                  <span>
+                    Fluttershy
+                  </span>
                 </span>
               </span>
             </a>
@@ -661,7 +693,9 @@ exports[`renders a DashboardsBar with minimum height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Rainbow Dash
+                  <span>
+                    Rainbow Dash
+                  </span>
                 </span>
               </span>
             </a>
@@ -697,6 +731,17 @@ exports[`renders a DashboardsBar with minimum height 1`] = `
     <div
       class="spacer"
     />
+    <div
+      style="position: absolute; top: 0px; right: 0px;"
+    >
+      <button
+        class="jsx-2371629422 "
+        data-test="dhis2-uicore-button"
+        type="button"
+      >
+        You are online
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -706,6 +751,7 @@ exports[`renders a DashboardsBar with no items 1`] = `
   <div
     class="collapsed"
     data-test="dashboards-bar"
+    style="position: relative;"
   >
     <div
       class="container"
@@ -787,7 +833,6 @@ exports[`renders a DashboardsBar with no items 1`] = `
                     class="jsx-2371629422 button-icon"
                   >
                     <svg
-                      color="#6e7a8a"
                       height="24"
                       viewBox="0 0 24 24"
                       width="24"
@@ -883,6 +928,17 @@ exports[`renders a DashboardsBar with no items 1`] = `
     <div
       class="spacer"
     />
+    <div
+      style="position: absolute; top: 0px; right: 0px;"
+    >
+      <button
+        class="jsx-2371629422 "
+        data-test="dhis2-uicore-button"
+        type="button"
+      >
+        You are online
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -892,6 +948,7 @@ exports[`renders a DashboardsBar with selected item 1`] = `
   <div
     class="collapsed"
     data-test="dashboards-bar"
+    style="position: relative;"
   >
     <div
       class="container"
@@ -973,7 +1030,6 @@ exports[`renders a DashboardsBar with selected item 1`] = `
                     class="jsx-2371629422 button-icon"
                   >
                     <svg
-                      color="#6e7a8a"
                       height="24"
                       viewBox="0 0 24 24"
                       width="24"
@@ -1066,7 +1122,9 @@ exports[`renders a DashboardsBar with selected item 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Fluttershy
+                  <span>
+                    Fluttershy
+                  </span>
                 </span>
               </span>
             </a>
@@ -1082,7 +1140,9 @@ exports[`renders a DashboardsBar with selected item 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Rainbow Dash
+                  <span>
+                    Rainbow Dash
+                  </span>
                 </span>
               </span>
             </a>
@@ -1118,6 +1178,17 @@ exports[`renders a DashboardsBar with selected item 1`] = `
     <div
       class="spacer"
     />
+    <div
+      style="position: absolute; top: 0px; right: 0px;"
+    >
+      <button
+        class="jsx-2371629422 "
+        data-test="dhis2-uicore-button"
+        type="button"
+      >
+        You are online
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -1127,6 +1198,7 @@ exports[`small screen: clicking "Show more" maximizes dashboards bar height 1`] 
   <div
     class="collapsed"
     data-test="dashboards-bar"
+    style="position: relative;"
   >
     <div
       class="container"
@@ -1207,7 +1279,6 @@ exports[`small screen: clicking "Show more" maximizes dashboards bar height 1`] 
                     class="jsx-2371629422 button-icon"
                   >
                     <svg
-                      color="#6e7a8a"
                       height="24"
                       viewBox="0 0 24 24"
                       width="24"
@@ -1299,7 +1370,9 @@ exports[`small screen: clicking "Show more" maximizes dashboards bar height 1`] 
                 <span
                   class="jsx-785997980 "
                 >
-                  Fluttershy
+                  <span>
+                    Fluttershy
+                  </span>
                 </span>
               </span>
             </a>
@@ -1315,7 +1388,9 @@ exports[`small screen: clicking "Show more" maximizes dashboards bar height 1`] 
                 <span
                   class="jsx-785997980 "
                 >
-                  Rainbow Dash
+                  <span>
+                    Rainbow Dash
+                  </span>
                 </span>
               </span>
             </a>
@@ -1351,6 +1426,17 @@ exports[`small screen: clicking "Show more" maximizes dashboards bar height 1`] 
     <div
       class="spacer"
     />
+    <div
+      style="position: absolute; top: 0px; right: 0px;"
+    >
+      <button
+        class="jsx-2371629422 "
+        data-test="dhis2-uicore-button"
+        type="button"
+      >
+        You are online
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -1360,6 +1446,7 @@ exports[`small screen: renders a DashboardsBar with minimum height 1`] = `
   <div
     class="collapsed"
     data-test="dashboards-bar"
+    style="position: relative;"
   >
     <div
       class="container"
@@ -1441,7 +1528,6 @@ exports[`small screen: renders a DashboardsBar with minimum height 1`] = `
                     class="jsx-2371629422 button-icon"
                   >
                     <svg
-                      color="#6e7a8a"
                       height="24"
                       viewBox="0 0 24 24"
                       width="24"
@@ -1534,7 +1620,9 @@ exports[`small screen: renders a DashboardsBar with minimum height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Fluttershy
+                  <span>
+                    Fluttershy
+                  </span>
                 </span>
               </span>
             </a>
@@ -1550,7 +1638,9 @@ exports[`small screen: renders a DashboardsBar with minimum height 1`] = `
                 <span
                   class="jsx-785997980 "
                 >
-                  Rainbow Dash
+                  <span>
+                    Rainbow Dash
+                  </span>
                 </span>
               </span>
             </a>
@@ -1586,6 +1676,17 @@ exports[`small screen: renders a DashboardsBar with minimum height 1`] = `
     <div
       class="spacer"
     />
+    <div
+      style="position: absolute; top: 0px; right: 0px;"
+    >
+      <button
+        class="jsx-2371629422 "
+        data-test="dhis2-uicore-button"
+        type="button"
+      >
+        You are online
+      </button>
+    </div>
   </div>
 </div>
 `;

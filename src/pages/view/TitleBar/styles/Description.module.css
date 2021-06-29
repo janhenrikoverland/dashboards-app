@@ -1,0 +1,13 @@
+.desc {
+    color: var(--colors-grey700);
+}
+
+.noDesc {
+    color: #888;
+}
+
+.descContainer {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

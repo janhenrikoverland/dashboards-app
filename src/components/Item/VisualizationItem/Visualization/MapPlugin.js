@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import i18n from '@dhis2/d2-i18n'
+import { useOnlineStatus } from '@dhis2/app-service-offline'
 import DefaultPlugin from './DefaultPlugin'
 import { MAP } from '../../../../modules/itemTypes'
 import { isElementFullscreen } from '../isElementFullscreen'
-import { pluginIsAvailable, resize, unmount } from './plugin'
+import getVisualizationContainerDomId from '../getVisualizationContainerDomId'
+import { pluginIsAvailable, getPlugin, unmount } from './plugin'
 import NoVisualizationMessage from './NoVisualizationMessage'
 
 const MapPlugin = ({
@@ -16,12 +18,29 @@ const MapPlugin = ({
     itemFilters,
     ...props
 }) => {
+    const { isOnline } = useOnlineStatus()
+
     useEffect(() => {
-        resize(props.item.id, MAP, isElementFullscreen(props.item.id))
+        const resizeMap = async (id, isFullscreen) => {
+            const plugin = await getPlugin(MAP)
+            plugin?.resize &&
+                plugin.resize(getVisualizationContainerDomId(id), isFullscreen)
+        }
+
+        resizeMap(props.item.id, isElementFullscreen(props.item.id))
     }, [availableHeight, availableWidth, gridWidth])
 
     // The function returned from this effect is run when this component unmounts
     useEffect(() => () => unmount(props.item, MAP), [])
+
+    useEffect(() => {
+        const setMapOfflineStatus = async isOnline => {
+            const plugin = await getPlugin(MAP)
+            plugin?.setOfflineStatus && plugin.setOfflineStatus(isOnline)
+        }
+
+        setMapOfflineStatus(!isOnline)
+    }, [isOnline])
 
     const getVisualization = () => {
         if (props.item.type === MAP) {

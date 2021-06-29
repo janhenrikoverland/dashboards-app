@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useD2 } from '@dhis2/app-runtime-adapter-d2'
 import { useConfig } from '@dhis2/app-runtime'
-import { load } from './plugin'
+import { load, unmount } from './plugin'
 import getVisualizationContainerDomId from '../getVisualizationContainerDomId'
 
 const DefaultPlugin = ({
@@ -12,6 +12,7 @@ const DefaultPlugin = ({
     visualization,
     options,
     style,
+    isRecording,
 }) => {
     const { d2 } = useD2()
     const { baseUrl } = useConfig()
@@ -35,6 +36,17 @@ const DefaultPlugin = ({
         prevActiveType.current = activeType
         prevFilterVersion.current = filterVersion
     }, [])
+
+    useEffect(() => {
+        if (isRecording) {
+            unmount(item, activeType)
+            load(item, visualization, {
+                credentials,
+                activeType,
+                isRecording,
+            })
+        }
+    }, [isRecording])
 
     useEffect(() => {
         if (
@@ -63,6 +75,7 @@ const DefaultPlugin = ({
 DefaultPlugin.propTypes = {
     activeType: PropTypes.string,
     filterVersion: PropTypes.string,
+    isRecording: PropTypes.bool,
     item: PropTypes.object,
     options: PropTypes.object,
     style: PropTypes.object,
@@ -71,6 +84,7 @@ DefaultPlugin.propTypes = {
 
 DefaultPlugin.defaultProps = {
     style: {},
+    isRecording: false,
     item: {},
     options: {},
     visualization: {},

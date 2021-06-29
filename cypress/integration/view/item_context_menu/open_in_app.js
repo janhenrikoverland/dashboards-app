@@ -3,7 +3,7 @@ import { clickMenuButton } from '../../../elements/dashboardItem'
 import { dashboards } from '../../../assets/backends'
 
 // these tests being run on the "Delivery" dashboard
-const chartItemUid = dashboards.Delivery.items.chart.itemUid
+const chartName = dashboards.Delivery.items.chart.name
 const chartItemVisUrl = `dhis-web-data-visualizer/#/${dashboards.Delivery.items.chart.visUid}`
 
 /*
@@ -11,7 +11,7 @@ Scenario: Open chart in Data Visualizer app
 */
 
 When('I click Open in Data Visualizer app on a chart dashboard item', () => {
-    clickMenuButton(chartItemUid)
+    clickMenuButton(chartName)
 
     cy.contains('Open in Data Visualizer app')
         .should('have.attr', 'href')

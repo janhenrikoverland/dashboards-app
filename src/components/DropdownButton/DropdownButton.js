@@ -1,31 +1,18 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
-import { Button, Layer, Popper } from '@dhis2/ui'
+import { Layer, Popper } from '@dhis2/ui'
+import Button from '../ButtonWithTooltip'
 import { ArrowDown, ArrowUp } from './assets/Arrow'
 
 import styles from './DropdownButton.module.css'
 
-const DropdownButton = ({
-    children,
-    className,
-    icon,
-    open,
-    onClick,
-    component,
-    small,
-}) => {
+const DropdownButton = ({ children, open, onClick, component, ...rest }) => {
     const anchorRef = useRef()
 
     const ArrowIconComponent = open ? ArrowUp : ArrowDown
     return (
         <div ref={anchorRef}>
-            <Button
-                className={className}
-                onClick={onClick}
-                type="button"
-                small={small}
-                icon={icon}
-            >
+            <Button onClick={onClick} {...rest}>
                 {children}
                 <ArrowIconComponent className={styles.arrow} />
             </Button>
@@ -41,13 +28,10 @@ const DropdownButton = ({
 }
 
 DropdownButton.propTypes = {
+    children: PropTypes.node.isRequired,
     component: PropTypes.element.isRequired,
     open: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    icon: PropTypes.element,
-    small: PropTypes.bool,
 }
 
 export default DropdownButton

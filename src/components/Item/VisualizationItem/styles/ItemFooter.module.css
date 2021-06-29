@@ -5,6 +5,10 @@
     background-color: var(--colors-grey100);
 }
 
+.cover:hover {
+    cursor: not-allowed;
+}
+
 .scrollContainer {
     position: relative;
     overflow-y: auto;

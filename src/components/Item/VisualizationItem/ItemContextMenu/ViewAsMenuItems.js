@@ -1,14 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import i18n from '@dhis2/d2-i18n'
-import {
-    MenuItem,
-    Tooltip,
-    colors,
-    IconVisualizationColumn16,
-    IconTable16,
-    IconWorld16,
-} from '@dhis2/ui'
+import { IconVisualizationColumn16, IconTable16, IconWorld16 } from '@dhis2/ui'
+import MenuItem from './MenuItemWithTooltip'
 
 import getThematicMapViews from '../getThematicMapViews'
 import {
@@ -37,72 +31,39 @@ const ViewAsMenuItems = ({
 
     const onViewMap = () => onActiveTypeChanged(MAP)
 
-    const isDisabled = type === MAP && !getThematicMapViews(visualization)
-
-    const iconColor = isDisabled ? colors.grey500 : colors.grey600
-
-    const ViewAsChartMenuItem = () => {
-        const ChartMenuItem = () => (
-            <MenuItem
-                dense
-                disabled={isDisabled}
-                label={i18n.t('View as Chart')}
-                onClick={onViewChart}
-                icon={<IconVisualizationColumn16 color={iconColor} />}
-            />
-        )
-
-        if (isDisabled) {
-            return (
-                <Tooltip
-                    content={i18n.t("This map can't be displayed as a chart")}
-                >
-                    <ChartMenuItem />
-                </Tooltip>
-            )
-        }
-
-        return <ChartMenuItem />
-    }
-
-    const ViewAsTableMenuItem = () => {
-        const TableMenuItem = () => (
-            <MenuItem
-                dense
-                disabled={isDisabled}
-                label={i18n.t('View as Table')}
-                onClick={onViewTable}
-                icon={<IconTable16 color={iconColor} />}
-            />
-        )
-
-        if (isDisabled) {
-            return (
-                <Tooltip
-                    content={i18n.t("This map can't be displayed as a table")}
-                >
-                    <TableMenuItem />
-                </Tooltip>
-            )
-        }
-
-        return <TableMenuItem />
-    }
+    const notSupported = type === MAP && !getThematicMapViews(visualization)
 
     return (
         <>
             {activeType !== CHART && activeType !== EVENT_CHART && (
-                <ViewAsChartMenuItem />
+                <MenuItem
+                    tooltip={
+                        notSupported
+                            ? i18n.t("This map can't be displayed as a chart")
+                            : null
+                    }
+                    label={i18n.t('View as Chart')}
+                    onClick={onViewChart}
+                    icon={<IconVisualizationColumn16 />}
+                />
             )}
             {activeType !== REPORT_TABLE && activeType !== EVENT_REPORT && (
-                <ViewAsTableMenuItem />
+                <MenuItem
+                    tooltip={
+                        notSupported
+                            ? i18n.t("This map can't be displayed as a table")
+                            : null
+                    }
+                    label={i18n.t('View as Table')}
+                    onClick={onViewTable}
+                    icon={<IconTable16 />}
+                />
             )}
             {hasMapView(type) && activeType !== MAP && (
                 <MenuItem
-                    dense
                     label={i18n.t('View as Map')}
                     onClick={onViewMap}
-                    icon={<IconWorld16 color={colors.grey600} />}
+                    icon={<IconWorld16 />}
                 />
             )}
         </>

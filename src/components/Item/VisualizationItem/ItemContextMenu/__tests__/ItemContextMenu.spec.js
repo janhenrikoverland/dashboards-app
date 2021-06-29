@@ -10,6 +10,10 @@ jest.mock('../../../../SystemSettingsProvider', () => ({
     useSystemSettings: jest.fn(),
 }))
 
+jest.mock('../../../../../modules/useOnlineStatus', () => ({
+    useOnlineStatus: jest.fn(() => ({ isOnline: true })),
+}))
+
 const mockSystemSettingsDefault = {
     settings: {
         allowVisOpenInApp: true,

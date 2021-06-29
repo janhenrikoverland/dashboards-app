@@ -1,22 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import i18n from '@dhis2/d2-i18n'
 import { NoticeBox, CenteredContent } from '@dhis2/ui'
 
-import classes from './styles/NotSupportedNotice.module.css'
+import classes from './styles/Notice.module.css'
 
-const NotSupportedNotice = ({ message }) => (
+const Notice = ({ title, message }) => (
     <CenteredContent position="top">
         <div className={classes.noticeContainer}>
-            <NoticeBox title={i18n.t('Not supported')} warning>
+            <NoticeBox title={title} warning>
                 {message}
             </NoticeBox>
         </div>
     </CenteredContent>
 )
 
-NotSupportedNotice.propTypes = {
+Notice.propTypes = {
     message: PropTypes.string,
+    title: PropTypes.string,
 }
 
-export default NotSupportedNotice
+export default Notice

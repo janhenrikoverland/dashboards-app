@@ -4,6 +4,30 @@
     vertical-align: top;
 }
 
+.labelWithAdornment {
+    position: relative;
+    top: -2px;
+}
+
+.adornment {
+    margin-left: 2px;
+    fill: var(--colors-grey600);
+}
+
+.adornment.selected {
+    fill: var(--colors-white);
+}
+
+.progressIndicator {
+    margin: 0 0 0 4px !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.progressIndicator.selected {
+    color: var(--colors-white);
+}
+
 @media only screen and (max-width: 480px) {
     .link {
         margin: 0 -2px;

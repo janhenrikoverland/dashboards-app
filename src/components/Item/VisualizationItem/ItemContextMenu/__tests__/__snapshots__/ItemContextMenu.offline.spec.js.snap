@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders just the button when menu closed 1`] = `
+<div>
+  <div>
+    <button
+      class="jsx-2371629422 secondary small icon-only"
+      data-test="dashboarditem-menu-button"
+      type="button"
+    >
+      <span
+        class="jsx-2371629422 button-icon"
+      >
+        <svg
+          color="#4a5768"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 10a2 2 0 110 4 2 2 0 010-4zm7 0a2 2 0 110 4 2 2 0 010-4zm7 0a2 2 0 110 4 2 2 0 010-4z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders null if all relevant settings are false 1`] = `<div />`;

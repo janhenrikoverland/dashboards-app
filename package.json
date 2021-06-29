@@ -8,6 +8,7 @@
         "@dhis2/analytics": "^18.2.2",
         "@dhis2/app-runtime": "^2.8.0",
         "@dhis2/app-runtime-adapter-d2": "^1.1.0",
+        "@dhis2/app-service-offline": "file:../app-runtime/services/offline",
         "@dhis2/d2-i18n": "^1.1.0",
         "@dhis2/d2-ui-core": "^7.3.1",
         "@dhis2/d2-ui-interpretations": "^7.3.1",
@@ -32,13 +33,19 @@
         "redux-logger": "^3.0.6",
         "redux-thunk": "^2.3.0",
         "reselect": "^4.0.0",
+        "serve": "^12.0.0",
         "styled-jsx": "3.3.2"
     },
+    "resolutions": {
+        "@dhis2/app-service-offline": "file:../app-runtime/services/offline",
+        "@dhis2/cli-app-scripts": "file:../app-platform/cli"
+    },
     "scripts": {
-        "start": "d2-app-scripts start",
+        "start": "yarn build && yarn serve",
+        "serve": "serve -l 3000 build/app",
         "coverage": "npm test -- --coverage",
         "lint": "d2-style js check || d2-style text check",
-        "build": "d2-app-scripts build",
+        "build": "d2-app-scripts build --standalone --force --verbose",
         "build:netlify": "yarn build --standalone",
         "test": "d2-app-scripts test",
         "validate-push": "CI=true yarn test",
@@ -51,7 +58,7 @@
         "cy:capture": "cypress_dhis2_api_stub_mode=CAPTURE yarn d2-utils-cypress run --appStart 'yarn cypress:start'"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^7.0.0",
+        "@dhis2/cli-app-scripts": "file:../app-platform/cli",
         "@dhis2/cli-style": "^7.2.2",
         "@dhis2/cli-utils-cypress": "^7.0.1",
         "@dhis2/cypress-commands": "^7.0.1",

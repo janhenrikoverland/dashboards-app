@@ -10,7 +10,7 @@ import {
 import { dashboards } from '../../../assets/backends'
 
 // these tests being run on the "Delivery" dashboard
-const chartItemUid = dashboards.Delivery.items.chart.itemUid
+const chartName = dashboards.Delivery.items.chart.name
 const tableItemUid = dashboards.Delivery.items.table.itemUid
 
 /*
@@ -18,7 +18,7 @@ Background
 */
 
 Then('the chart dashboard item displays as a chart', () => {
-    getDashboardItem(chartItemUid)
+    getDashboardItem(chartName)
         .find(chartSel, EXTENDED_TIMEOUT)
         .should('exist')
         .and('be.visible')
@@ -36,12 +36,12 @@ Scenario: View chart as table
 */
 
 When('I click View As Table on a chart dashboard item', () => {
-    clickMenuButton(chartItemUid)
+    clickMenuButton(chartName)
     cy.contains('View as Table').click()
 })
 
 Then('the chart dashboard item displays as a table', () => {
-    getDashboardItem(chartItemUid)
+    getDashboardItem(chartName)
         .find(tableSel, EXTENDED_TIMEOUT)
         .should('exist')
         .and('be.visible')
@@ -52,12 +52,12 @@ Scenario: View chart as map
 */
 
 When('I click View As Map on a chart dashboard item', () => {
-    clickMenuButton(chartItemUid)
+    clickMenuButton(chartName)
     cy.contains('View as Map').click()
 })
 
 Then('the chart dashboard item displays as a map', () => {
-    getDashboardItem(chartItemUid)
+    getDashboardItem(chartName)
         .find(mapSel, EXTENDED_TIMEOUT)
         .should('exist')
         .and('be.visible')

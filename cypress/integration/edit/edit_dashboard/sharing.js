@@ -1,6 +1,7 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps'
 import { EXTENDED_TIMEOUT } from '../../../support/utils'
 import { dashboardTitleSel } from '../../../elements/viewDashboard'
+import { getSharingDialogUserSearch } from '../../../elements/sharingDialog'
 
 const USER_NAME = 'Kevin Boateng'
 
@@ -10,7 +11,7 @@ When('I change sharing settings', () => {
     //confirm that Boateng is not currently listed
     cy.get('hr').should('have.length', 3)
 
-    cy.get('[placeholder="Enter names"]').type('Boateng')
+    getSharingDialogUserSearch().type('Boateng')
     cy.contains(USER_NAME).click()
 
     cy.get('div').contains(USER_NAME).should('be.visible')

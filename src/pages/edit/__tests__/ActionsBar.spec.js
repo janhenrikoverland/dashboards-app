@@ -58,6 +58,7 @@ test('renders the ActionsBar without Delete when no delete access', async () => 
                 delete: false,
             },
             printPreviewView: false,
+            isDirty: false,
         },
     }
 
@@ -80,6 +81,7 @@ test('renders only the Go to Dashboards button when no update access', async () 
                 delete: false,
             },
             printPreviewView: false,
+            isDirty: false,
         },
     }
 
@@ -116,6 +118,7 @@ test('renders Translate, Delete, and Discard buttons when delete access', async 
                 delete: true,
             },
             printPreviewView: false,
+            isDirty: false,
         },
     }
 

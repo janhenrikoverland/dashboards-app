@@ -1,0 +1,33 @@
+.actions {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.strip {
+    display: flex;
+    margin-left: var(--spacers-dp8);
+}
+
+.strip > * {
+    margin-left: var(--spacers-dp8);
+}
+
+.strip .moreButtonSmall {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .strip .editLink,
+    .strip .shareButton {
+        display: none;
+    }
+
+    .strip .moreButton {
+        display: none;
+    }
+
+    .strip .moreButtonSmall {
+        display: inline-flex;
+    }
+}

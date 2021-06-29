@@ -33,6 +33,16 @@
     height: var(--user-rows-height);
 }
 
+.offline {
+    background-color: rgb(195, 100, 100) !important;
+    color: white !important;
+}
+
+.online {
+    background-color: rgb(143, 188, 167) !important;
+    color: white !important;
+}
+
 @media only screen and (min-width: 481px) {
     .expanded .spacer {
         display: block;

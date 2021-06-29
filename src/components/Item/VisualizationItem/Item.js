@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isEmpty from 'lodash/isEmpty'
 import i18n from '@dhis2/d2-i18n'
+
 import Visualization from './Visualization/Visualization'
 import FatalErrorBoundary from './FatalErrorBoundary'
 import ItemHeader from '../ItemHeader/ItemHeader'
@@ -97,6 +98,14 @@ class Item extends Component {
         }
 
         this.setState({ configLoaded: true })
+    }
+
+    async componentDidUpdate() {
+        if (this.props.isRecording) {
+            this.props.setVisualization(
+                await apiFetchVisualization(this.props.item)
+            )
+        }
     }
 
     isFullscreenSupported = () => {
@@ -233,6 +242,7 @@ class Item extends Component {
                                             availableWidth={this.getAvailableWidth()}
                                             gridWidth={this.props.gridWidth}
                                             dashboardMode={dashboardMode}
+                                            isRecording={this.props.isRecording}
                                         />
                                     </div>
                                 )}
@@ -253,6 +263,7 @@ Item.propTypes = {
     dashboardMode: PropTypes.string,
     gridWidth: PropTypes.number,
     isEditing: PropTypes.bool,
+    isRecording: PropTypes.bool,
     item: PropTypes.object,
     itemFilters: PropTypes.object,
     setActiveType: PropTypes.func,

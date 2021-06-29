@@ -4,23 +4,26 @@ import { connect } from 'react-redux'
 import isEmpty from 'lodash/isEmpty'
 import i18n from '@dhis2/d2-i18n'
 import { DimensionsPanel } from '@dhis2/analytics'
+import { useOnlineStatus } from '@dhis2/app-service-offline'
 import { Card, colors, IconFilter24 } from '@dhis2/ui'
-import FilterDialog from './FilterDialog'
 
+import FilterDialog from './FilterDialog'
 import { sGetActiveModalDimension } from '../../../reducers/activeModalDimension'
 import { sGetItemFiltersRoot } from '../../../reducers/itemFilters'
+
 import {
     acClearActiveModalDimension,
     acSetActiveModalDimension,
 } from '../../../actions/activeModalDimension'
 import useDimensions from '../../../modules/useDimensions'
-import DropdownButton from '../../../components/DropdownButton/DropdownButton'
+import { DropdownButton } from '../../../components/DropdownButton'
 
 import classes from './styles/FilterSelector.module.css'
 
 const FilterSelector = props => {
     const [filterDialogIsOpen, setFilterDialogIsOpen] = useState(false)
     const dimensions = useDimensions(filterDialogIsOpen)
+    const { isOnline } = useOnlineStatus()
 
     const toggleFilterDialogIsOpen = () =>
         setFilterDialogIsOpen(!filterDialogIsOpen)
@@ -63,6 +66,7 @@ const FilterSelector = props => {
             <span className={classes.buttonContainer}>
                 <DropdownButton
                     open={filterDialogIsOpen}
+                    disabled={!isOnline}
                     onClick={toggleFilterDialogIsOpen}
                     icon={<IconFilter24 color={colors.grey700} />}
                     component={getFilterSelector()}

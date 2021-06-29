@@ -2,31 +2,9 @@
     margin-top: var(--spacers-dp12);
 }
 
-.actions {
-    display: flex;
-    align-items: center;
-    margin-left: 8px;
-}
-.editLink {
-    text-decoration: none;
-}
 .titleBar {
     display: flex;
     align-items: flex-start;
-}
-.star {
-    margin-left: 5px;
-    position: relative;
-    top: 1px;
-    cursor: pointer;
-}
-.strip {
-    display: flex;
-    margin-left: var(--spacers-dp8);
-}
-
-.strip > * {
-    margin-left: var(--spacers-dp8);
 }
 
 .title {
@@ -40,42 +18,8 @@
     top: 7px;
 }
 
-.descContainer {
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.desc {
-    color: var(--colors-grey700);
-}
-
-.noDesc {
-    color: #888;
-}
-
-.moreText {
-    margin-left: 5px;
-}
-
-.strip .moreButtonSmall {
-    display: none;
-}
-
 @media only screen and (max-width: 480px) {
-    .strip .editLink,
-    .strip .shareButton {
-        display: none;
-    }
-
     .title {
         top: 3px;
-    }
-    .strip .moreButton {
-        display: none;
-    }
-
-    .strip .moreButtonSmall {
-        display: inline-flex;
     }
 }

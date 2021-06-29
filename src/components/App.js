@@ -3,10 +3,11 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { CssVariables } from '@dhis2/ui'
+import { useD2 } from '@dhis2/app-runtime-adapter-d2'
+
 import { NewDashboard, EditDashboard } from '../pages/edit'
 import { ViewDashboard } from '../pages/view'
 import { PrintDashboard, PrintLayoutDashboard } from '../pages/print'
-import { useD2 } from '@dhis2/app-runtime-adapter-d2'
 
 import { tFetchDashboards } from '../actions/dashboards'
 import { tSetControlBarRows } from '../actions/controlBar'

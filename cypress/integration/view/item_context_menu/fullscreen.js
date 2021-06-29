@@ -13,6 +13,6 @@ Then('the text item does not have a context menu', () => {
 })
 
 Then('the chart item has a fullscreen option in the context menu', () => {
-    clickMenuButton(dashboards['Antenatal Care'].items.chart.itemUid)
+    clickMenuButton(dashboards['Antenatal Care'].items.chart.name)
     cy.contains('View fullscreen').should('be.visible')
 })

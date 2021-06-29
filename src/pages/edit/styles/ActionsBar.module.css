@@ -15,3 +15,13 @@
     justify-content: space-between;
     padding: 0 var(--spacers-dp8);
 }
+
+.offline {
+    background-color: rgb(195, 100, 100) !important;
+    color: white !important;
+}
+
+.online {
+    background-color: rgb(143, 188, 167) !important;
+    color: white !important;
+}
