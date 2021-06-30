@@ -311,11 +311,12 @@ msgstr ""
 
 msgid "{{count}} selected"
 msgid_plural "{{count}} selected"
-msgstr[0] "تم اختيار {{count}}"
+msgstr[0] "0"
 msgstr[1] "تم اختيار {{count}}"
 msgstr[2] "تم اختيار {{count}}"
 msgstr[3] "تم اختيار {{count}}"
 msgstr[4] "تم اختيار {{count}}"
+msgstr[5] "تم اختيار {{count}}"
 
 msgid "Remove"
 msgstr "إزالة"
