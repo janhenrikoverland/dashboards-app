@@ -79,6 +79,7 @@ msgstr[1] "تم تحديد {{count}}"
 msgstr[2] "تم تحديد {{count}}"
 msgstr[3] "تم تحديد {{count}}"
 msgstr[4] "تم تحديد {{count}}"
+msgstr[5] "تم تحديد {{count}}"
 
 msgid "Remove"
 msgstr "إزالة"
