@@ -15,7 +15,7 @@
         "@dhis2/d2-ui-rich-text": "^7.3.1",
         "@dhis2/d2-ui-sharing-dialog": "^7.3.1",
         "@dhis2/d2-ui-translation-dialog": "^7.3.1",
-        "@dhis2/data-visualizer-plugin": "^37.5.0",
+        "@dhis2/data-visualizer-plugin": "^37.5.5",
         "@dhis2/ui": "^6.10.4",
         "classnames": "^2.3.1",
         "d2": "^31.10.0",
@@ -37,7 +37,7 @@
     "scripts": {
         "start": "d2-app-scripts start",
         "coverage": "npm test -- --coverage",
-        "lint": "d2-style js check || d2-style text check",
+        "lint": "d2-style check",
         "build": "d2-app-scripts build",
         "build:netlify": "yarn build --standalone",
         "test": "d2-app-scripts test",
@@ -51,8 +51,8 @@
         "cy:capture": "cypress_dhis2_api_stub_mode=CAPTURE yarn d2-utils-cypress run --appStart 'yarn cypress:start'"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^7.0.0",
-        "@dhis2/cli-style": "^7.2.2",
+        "@dhis2/cli-app-scripts": "^7.0.1",
+        "@dhis2/cli-style": "^9.0.1",
         "@dhis2/cli-utils-cypress": "^7.0.1",
         "@dhis2/cypress-commands": "^7.0.1",
         "@testing-library/jest-dom": "^5.14.1",
