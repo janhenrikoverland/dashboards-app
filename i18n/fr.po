@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-08-26T13:20:39.720Z\n"
+"POT-Creation-Date: 2021-07-06T14:06:20.506Z\n"
 "PO-Revision-Date: 2020-03-02 13:27+0000\n"
 "Last-Translator: Yao Selom Saka <ysaka@hispwca.org>, 2020\n"
 "Language-Team: French (https://www.transifex.com/hisp-uio/teams/100509/fr/)\n"
@@ -139,6 +139,12 @@ msgstr "Afficher comme carte"
 
 msgid "Open in {{appName}} app"
 msgstr "Ouvrir dans l'app {{appName}}"
+
+msgid "There was an error loading data for this item"
+msgstr ""
+
+msgid "Open this item in {{appName}}"
+msgstr ""
 
 msgid "Confirm"
 msgstr "Confirmer"

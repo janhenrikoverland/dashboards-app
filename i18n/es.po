@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-08-26T13:20:39.720Z\n"
+"POT-Creation-Date: 2021-07-06T14:06:20.506Z\n"
 "PO-Revision-Date: 2020-03-02 13:27+0000\n"
 "Last-Translator: drprabhjot, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/hisp-uio/teams/100509/es/)\n"
@@ -136,6 +136,12 @@ msgstr "Ver como mapa"
 
 msgid "Open in {{appName}} app"
 msgstr "Abrir en la aplicación {{appName}}"
+
+msgid "There was an error loading data for this item"
+msgstr "Hubo un error al cargar los datos de este elemento."
+
+msgid "Open this item in {{appName}}"
+msgstr "Abra este elemento en {{appName}}"
 
 msgid "Confirm"
 msgstr "Confirmar"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-08-26T13:20:39.720Z\n"
+"POT-Creation-Date: 2021-07-06T14:06:20.506Z\n"
 "PO-Revision-Date: 2020-03-02 13:27+0000\n"
 "Last-Translator: Yury Rogachev <yury@dhis2.org>, 2021\n"
 "Language-Team: Uzbek (Latin) (https://www.transifex.com/hisp-uio/teams/100509/uz@Latn/)\n"
@@ -132,6 +132,12 @@ msgstr "Xarita sifatida koʼrish"
 
 msgid "Open in {{appName}} app"
 msgstr "Ilovada {{appName}} da ochish"
+
+msgid "There was an error loading data for this item"
+msgstr ""
+
+msgid "Open this item in {{appName}}"
+msgstr ""
 
 msgid "Confirm"
 msgstr "Tasdiqlang"
