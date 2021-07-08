@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-09-08T17:54:39.674Z\n"
+"POT-Creation-Date: 2021-07-06T07:28:33.146Z\n"
 "PO-Revision-Date: 2020-12-22 22:13+0000\n"
 "Last-Translator: easylin <lin_xd@126.com>, 2021\n"
 "Language-Team: Chinese (https://www.transifex.com/hisp-uio/teams/100509/zh/)\n"
@@ -165,6 +165,12 @@ msgstr "查看地图"
 
 msgid "Open in {{appName}} app"
 msgstr "在{{appName}} 应用中打开"
+
+msgid "There was an error loading data for this item"
+msgstr "加载此项目的数据时出错"
+
+msgid "Open this item in {{appName}}"
+msgstr "在 {{appName}} 中打开此条目"
 
 msgid "Confirm"
 msgstr "确认"

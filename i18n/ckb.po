@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-09-08T17:54:39.674Z\n"
+"POT-Creation-Date: 2021-07-06T07:28:33.146Z\n"
 "PO-Revision-Date: 2020-12-22 22:13+0000\n"
 "Last-Translator: KRG HIS <antonia.bezenchek@informa.pro>, 2020\n"
 "Language-Team: Central Kurdish (https://www.transifex.com/hisp-uio/teams/100509/ckb/)\n"
@@ -164,6 +164,12 @@ msgid "View as Map"
 msgstr ""
 
 msgid "Open in {{appName}} app"
+msgstr ""
+
+msgid "There was an error loading data for this item"
+msgstr ""
+
+msgid "Open this item in {{appName}}"
 msgstr ""
 
 msgid "Confirm"
