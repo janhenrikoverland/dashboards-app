@@ -25,7 +25,7 @@
         "moment": "^2.29.1",
         "react": "^16.14.0",
         "react-dom": "^16.13.1",
-        "react-grid-layout": "1.2.2",
+        "react-grid-layout": "1.2.5",
         "react-redux": "^7.2.4",
         "react-router-dom": "^5.2.0",
         "redux": "^4.1.0",
