@@ -42,17 +42,15 @@ exports[`Visualization/Item renders edit mode 1`] = `
       </span>
     </div>
   </div>
-  <div>
+  <div
+    class="dashboard-item-content"
+  >
     <div
-      class="dashboard-item-content"
-    >
-      <div
-        activetype="CHART"
-        class="visualization"
-        item="[object Object]"
-        itemfilters="[object Object]"
-      />
-    </div>
+      activetype="CHART"
+      class="visualization"
+      item="[object Object]"
+      itemfilters="[object Object]"
+    />
   </div>
 </div>
 `;
@@ -71,17 +69,15 @@ exports[`Visualization/Item renders view mode 1`] = `
       class="itemActionsWrap"
     />
   </div>
-  <div>
+  <div
+    class="dashboard-item-content"
+  >
     <div
-      class="dashboard-item-content"
-    >
-      <div
-        activetype="CHART"
-        class="visualization"
-        item="[object Object]"
-        itemfilters="[object Object]"
-      />
-    </div>
+      activetype="CHART"
+      class="visualization"
+      item="[object Object]"
+      itemfilters="[object Object]"
+    />
   </div>
 </div>
 `;

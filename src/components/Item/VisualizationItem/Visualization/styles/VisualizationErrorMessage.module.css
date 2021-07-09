@@ -7,6 +7,7 @@
 }
 
 .errorMessage {
+    margin-top: var(--spacers-dp48);
     margin-bottom: var(--spacers-dp8);
     font-size: 16px;
     font-weight: 600;
@@ -15,4 +16,8 @@
 .appLink {
     font-size: 16px;
     margin-top: var(--spacers-dp8);
+}
+
+.appLink a {
+    color: var(--colors-grey700);
 }

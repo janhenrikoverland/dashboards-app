@@ -209,30 +209,24 @@ class Item extends Component {
                     )}
                     onFatalError={this.onFatalError}
                 >
-                    <div ref={ref => (this.contentRef = ref)}>
+                    <div
+                        className="dashboard-item-content"
+                        ref={ref => (this.contentRef = ref)}
+                    >
                         {this.state.configLoaded && (
                             <WindowDimensionsCtx.Consumer>
                                 {dimensions => (
-                                    <div
-                                        className="dashboard-item-content"
-                                        style={{
-                                            height: this.getAvailableHeight(
-                                                dimensions
-                                            ),
-                                        }}
-                                    >
-                                        <Visualization
-                                            item={item}
-                                            activeType={activeType}
-                                            itemFilters={itemFilters}
-                                            availableHeight={this.getAvailableHeight(
-                                                dimensions
-                                            )}
-                                            availableWidth={this.getAvailableWidth()}
-                                            gridWidth={this.props.gridWidth}
-                                            dashboardMode={dashboardMode}
-                                        />
-                                    </div>
+                                    <Visualization
+                                        item={item}
+                                        activeType={activeType}
+                                        itemFilters={itemFilters}
+                                        availableHeight={this.getAvailableHeight(
+                                            dimensions
+                                        )}
+                                        availableWidth={this.getAvailableWidth()}
+                                        gridWidth={this.props.gridWidth}
+                                        dashboardMode={dashboardMode}
+                                    />
                                 )}
                             </WindowDimensionsCtx.Consumer>
                         )}
