@@ -51,7 +51,7 @@
         "cy:capture": "cypress_dhis2_api_stub_mode=CAPTURE yarn d2-utils-cypress run --appStart 'yarn cypress:start'"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^7.1.0",
+        "@dhis2/cli-app-scripts": "^7.1.2",
         "@dhis2/cli-style": "^9.0.1",
         "@dhis2/cli-utils-cypress": "^7.0.1",
         "@dhis2/cypress-commands": "^7.0.1",
