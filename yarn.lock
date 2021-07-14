@@ -2064,10 +2064,10 @@
     classnames "^2.3.1"
     prop-types "^15.7.2"
 
-"@dhis2/analytics@^20.0.2":
-  version "20.0.2"
-  resolved "https://registry.yarnpkg.com/@dhis2/analytics/-/analytics-20.0.2.tgz#0619ffdba59db03df176ae0c2a7d8d5b55fb68b7"
-  integrity sha512-oN7Fo2BE0PIKbaEUFVoED54v71lnmOpdeK00DPlEvG5vB/97pe+tmONz5imW2vkZGwmS/fqcF7C680GV4iRuOQ==
+"@dhis2/analytics@^20.0.2", "@dhis2/analytics@^20.0.4":
+  version "20.0.4"
+  resolved "https://registry.yarnpkg.com/@dhis2/analytics/-/analytics-20.0.4.tgz#d68fa1c068a5ca58731dcd90526f3291e6189358"
+  integrity sha512-0ogkqlmXrOdDaZ60RDSIIIMJEp/e1OqISzekEYMc9WwKNpVOXU681o+oXlBgAl1KEm0w5AB0KDZT6H+sr1Y2uQ==
   dependencies:
     "@dhis2/d2-ui-favorites-dialog" "^7.3.0"
     "@dhis2/d2-ui-org-unit-dialog" "^7.3.0"
@@ -2366,15 +2366,15 @@
     react-select "^2.0.0"
     rxjs "^5.5.7"
 
-"@dhis2/data-visualizer-plugin@^37.6.2":
-  version "37.6.2"
-  resolved "https://registry.yarnpkg.com/@dhis2/data-visualizer-plugin/-/data-visualizer-plugin-37.6.2.tgz#78a2da9b52268fbef067a1a1ef0f7d1509d97e4d"
-  integrity sha512-qip085vi7bXgmOLJUlvL9WAhXl+xgsoyVgNvJCzWkOfXjhsoPbwq4AON3Ntx8ctNuKW4Hc3v10plXlIeX6QMxw==
+"@dhis2/data-visualizer-plugin@^37.6.4":
+  version "37.6.4"
+  resolved "https://registry.yarnpkg.com/@dhis2/data-visualizer-plugin/-/data-visualizer-plugin-37.6.4.tgz#5702c56ca9632184aca269b945fee942decaa296"
+  integrity sha512-eYuWelyHC2TKz5zhEEZPuawUCwqTgKb1g6uxVcTXtP0vbeaL5udJV9w8GhRLYljfzMshlDQlR824Ogjt8nFs2Q==
   dependencies:
-    "@dhis2/analytics" "^20.0.2"
+    "@dhis2/analytics" "^20.0.4"
     "@dhis2/app-runtime" "^2.8.0"
     "@dhis2/d2-i18n" "^1.1.0"
-    "@dhis2/ui" "^6.9.0"
+    "@dhis2/ui" "^6.10.5"
     lodash-es "^4.17.21"
 
 "@dhis2/prop-types@^1.6.4":
@@ -2477,7 +2477,7 @@
     "@dhis2/prop-types" "^1.6.4"
     classnames "^2.3.1"
 
-"@dhis2/ui@^6.10.5", "@dhis2/ui@^6.5.3", "@dhis2/ui@^6.9.0":
+"@dhis2/ui@^6.10.5", "@dhis2/ui@^6.5.3":
   version "6.10.5"
   resolved "https://registry.yarnpkg.com/@dhis2/ui/-/ui-6.10.5.tgz#de9e6fb53d75a47eb23a63e20bc4a60908c5d9cd"
   integrity sha512-YM9YRVo5UXFXqHr7dJSoH8x6z3eFkaEmoHlmPht4hmCiNUK7MJK+CoBGwAXB8+UD/t7kIZhJpMJiF6mN5vCxwQ==

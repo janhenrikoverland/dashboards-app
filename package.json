@@ -15,7 +15,7 @@
         "@dhis2/d2-ui-rich-text": "^7.3.1",
         "@dhis2/d2-ui-sharing-dialog": "^7.3.1",
         "@dhis2/d2-ui-translation-dialog": "^7.3.1",
-        "@dhis2/data-visualizer-plugin": "^37.6.2",
+        "@dhis2/data-visualizer-plugin": "^37.6.4",
         "@dhis2/ui": "^6.10.5",
         "classnames": "^2.3.1",
         "d2": "^31.10.0",
