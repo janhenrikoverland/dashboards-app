@@ -5,7 +5,7 @@
     "private": true,
     "license": "BSD-3-Clause",
     "dependencies": {
-        "@dhis2/analytics": "^20.0.2",
+        "@dhis2/analytics": "^20.0.4",
         "@dhis2/app-runtime": "^2.8.0",
         "@dhis2/app-runtime-adapter-d2": "^1.1.0",
         "@dhis2/d2-i18n": "^1.1.0",

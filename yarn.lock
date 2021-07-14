@@ -2064,10 +2064,10 @@
     classnames "^2.3.1"
     prop-types "^15.7.2"
 
-"@dhis2/analytics@^20.0.2":
-  version "20.0.2"
-  resolved "https://registry.yarnpkg.com/@dhis2/analytics/-/analytics-20.0.2.tgz#0619ffdba59db03df176ae0c2a7d8d5b55fb68b7"
-  integrity sha512-oN7Fo2BE0PIKbaEUFVoED54v71lnmOpdeK00DPlEvG5vB/97pe+tmONz5imW2vkZGwmS/fqcF7C680GV4iRuOQ==
+"@dhis2/analytics@^20.0.2", "@dhis2/analytics@^20.0.4":
+  version "20.0.4"
+  resolved "https://registry.yarnpkg.com/@dhis2/analytics/-/analytics-20.0.4.tgz#d68fa1c068a5ca58731dcd90526f3291e6189358"
+  integrity sha512-0ogkqlmXrOdDaZ60RDSIIIMJEp/e1OqISzekEYMc9WwKNpVOXU681o+oXlBgAl1KEm0w5AB0KDZT6H+sr1Y2uQ==
   dependencies:
     "@dhis2/d2-ui-favorites-dialog" "^7.3.0"
     "@dhis2/d2-ui-org-unit-dialog" "^7.3.0"
